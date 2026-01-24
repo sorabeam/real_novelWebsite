@@ -52,7 +52,7 @@ function SlideShow(){
   <Swiper modules={[Autoplay]} slidesPerView="auto" spaceBetween={16} autoplay={{ delay: 2000 }} speed={1200} loop={true}>
           {data.map((item, index) => (
             <SwiperSlide key={index}>
-              <div class="hero">
+              <div className="hero">
               <img src={item.Image} className="Block-Img" alt="404 Imgage Not Found" />
               </div>
             </SwiperSlide>
@@ -98,12 +98,12 @@ function App() {
   const [reload, setReload] = useState(false);
 
   useEffect(() => {
-    fetch("/items")
+    fetch("https://real-novel-backend.vercel.app/items")
       .then(res => res.json())
       .then(data => setItems(data))
       .catch(err => console.error(err));
 
-      fetch("/rdata")
+      fetch("https://real-novel-backend.vercel.app/rdata")
       .then(res => res.json())
       .then(data => setRdata(data))
       .catch(err => console.error(err));
