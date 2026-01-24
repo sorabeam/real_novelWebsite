@@ -8,6 +8,13 @@ import cors from "cors";
 import mongoose from "mongoose";
 
 const app = express();
+
+await mongoose.connect(process.env.MONGO_URL).then(() => {
+  console.log("---MongoDB connected---");
+}).catch(err => {
+  console.error("Fail to connect..");
+});
+
 app.use(cors());
 app.use(express.json());
 app.use("/items", itemRoutes);
@@ -15,11 +22,7 @@ app.use("/rdata", RdataRoutes);
 
 console.log("MONGO_URL =", process.env.MONGO_URL);
 
-await mongoose.connect(process.env.MONGO_URL).then(() => {
-  console.log("---MongoDB connected---");
-}).catch(err => {
-  console.error("Fail to connect..");
-});
+
 
 app.get("/", (req, res) => {
   res.send("Backend is running");
