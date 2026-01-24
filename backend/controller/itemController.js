@@ -8,9 +8,13 @@ export async function getItems(req ,res) {
     console.log(Item);
     return res.json(items);  
   }catch (err) {
-    console.error("getItems error:", err);
-    return res.status(500).json({ message: "server error" });
-  }
+  console.error("getItems error:", err);
+  return res.status(500).json({
+    message: "server error",
+    error: err.message,
+    stack: err.stack
+  });
+}
 }
 
 export async function getRdata(req ,res) {
@@ -18,9 +22,13 @@ export async function getRdata(req ,res) {
     const items = await Rdata.find().lean(); // safe here
     return res.json(items);  
   }catch (err) {
-    console.error("getRdata error:", err);
-    return res.status(500).json({ message: "server error" });
-  }
+  console.error("getItems error:", err);
+  return res.status(500).json({
+    message: "server error",
+    error: err.message,
+    stack: err.stack
+  });
+}
 }
 
 export async function deleteRdata(req, res) {
@@ -32,8 +40,13 @@ export async function deleteRdata(req, res) {
     }
     res.json({ message: "Deleted", item });
   } catch (err) {
-    res.status(500).json({ message: "server error" });
-  }
+  console.error("getItems error:", err);
+  return res.status(500).json({
+    message: "server error",
+    error: err.message,
+    stack: err.stack
+  });
+}
 }
 
 export async function AddReadingNovel(req, res) {
@@ -42,6 +55,11 @@ export async function AddReadingNovel(req, res) {
     await item.save();
     res.status(201).json(item);
   } catch (err) {
-    res.status(400).json({ error: err.message });
-  }
+  console.error("getItems error:", err);
+  return res.status(500).json({
+    message: "server error",
+    error: err.message,
+    stack: err.stack
+  });
+}
 };
