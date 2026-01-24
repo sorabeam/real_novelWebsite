@@ -1,4 +1,4 @@
-const BACKEND_URL = "http://localhost:5000/rdata";
+const BACKEND_URL = "https://real-novel-website.vercel.app/rdata";
 
 async function handle(res, label) {
   if (!res.ok) {
