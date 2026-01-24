@@ -21,7 +21,6 @@ await mongoose.connect(process.env.MONGO_URL).then(() => {
   console.error("Fail to connect..");
 });
 
-
 app.get("/", (req, res) => {
   res.send("Backend is running");
 });

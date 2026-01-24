@@ -2,8 +2,10 @@ import {Item,Rdata} from "../model/Item.js";
 
 // GET
 export async function getItems(req ,res) {
+  console.log(req);
   try {
     const items = await Item.find().lean(); // safe here
+    console.log(Item);
     return res.json(items);  
   }catch (err) {
     console.error("getItems error:", err);
