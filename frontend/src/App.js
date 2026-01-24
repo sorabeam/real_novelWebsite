@@ -98,12 +98,12 @@ function App() {
   const [reload, setReload] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/items")
+    fetch("https://real-novel-website.vercel.app/items")
       .then(res => res.json())
       .then(data => setItems(data))
       .catch(err => console.error(err));
 
-      fetch("http://localhost:5000/rdata")
+      fetch("https://real-novel-website.vercel.app/rdata")
       .then(res => res.json())
       .then(data => setRdata(data))
       .catch(err => console.error(err));
