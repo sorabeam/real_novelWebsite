@@ -1,0 +1,248 @@
+.App {
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255),
+   rgb(255, 161, 89));
+  text-align :center;
+  min-height: 100vh;
+}
+
+.swiper {
+  width: 100%;
+}
+
+h1 {
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+}
+
+.swiper-slide {
+  max-width: 600px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  object-fit: fill;
+}
+
+.hero {
+  margin-top: 21px;
+  width: 100%;
+  height: 42vmin;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* ตัดขอบ ไม่ยืด */
+}
+
+.Block-Img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.NovelTitle {
+  text-align: left;
+  font-size: clamp(0.9rem, 1.1vw, 2.2rem);
+}
+ 
+.InfoText{
+  font-size: clamp(0.7rem, 0.8vw, 2rem);;
+  padding-right: 5px;
+}
+
+.ReadingTitle{
+  text-align: left;
+  font-size: clamp(0.9rem, 1.1vw, 2.2rem);
+}
+
+.ReadingSubTitle{
+  text-align: left;
+  font-size: clamp(0.7rem, 0.8vw, 2rem);
+}
+
+.Text {
+  font-size: clamp(0.7rem, 1.3vw, 2rem);;
+}
+
+.Read-list {
+  width: 43vmin;
+  height: 23vmin;
+  object-fit: contain;
+}
+
+.BlockFrame {
+  margin-left: auto;
+  margin-right: auto;
+  height: 42vmin;
+}
+
+.BottomArea {
+  margin-left: auto;
+  margin-right: auto;
+  height: 23vmax;
+  width: 98%;
+  align-items: left;
+  display: flex;
+}
+
+.ReadBox {
+  margin-top: 3vmin;
+  margin-right: auto;
+  height: 42vmin;
+  width: 22.5%;
+  align-items: left;
+  background-image: linear-gradient(to top, rgba(4, 0, 0, 0.208),
+   rgba(153, 153, 153, 0.274));
+  outline : auto;
+}
+
+.BookMark {
+  margin-top: 3vmin;
+  outline: auto;
+  margin-left: auto;
+  margin-right: auto;
+  height: 42vmin;
+  width: 73.5%;
+  align-items: left;
+  background-color: #00000027;
+}
+
+.Read {
+  background-color: white;
+  margin: auto;
+  height:  100%;
+  width: 88%;
+  align-items: center;
+  object-fit: contain;
+  outline: auto;
+}
+
+
+.InventoryFrame {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  height: 94%;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.InventoryFrame::-webkit-scrollbar{
+  display: none;
+}
+
+.ReadingFrame {
+  display :grid;
+  gap: 12px;
+  height: 39vmin;
+  overflow-y: scroll;
+  overscroll-behavior-y: contain;
+  padding: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ReadingList{
+  display: flex;
+  height:15vmin;
+  flex-direction: row;
+  background-color: #ffffff;
+  outline: auto;
+}
+
+.BlockElement {
+  display: flex;
+  flex-direction: row;
+  height: 15vmin;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  outline: auto;
+}
+
+.ReadingFrame::-webkit-scrollbar{
+  display: none;
+}
+
+.Poster {
+  height: 15vmin;
+  width: 12vmin;
+  margin-right: 20px;
+}
+
+.ProfilePicture {
+  height: 5vmin;
+  width: 5vmin;
+  padding: 20px;
+}
+
+.VWbutton{
+  margin-left: auto;
+  background: #00000000;
+}
+
+.NovelInfo{
+  display: flex;
+  flex-direction: column;
+}
+
+.NovelInfo h3 {
+  margin-bottom: 0;
+}
+.NovelInfo h5 {
+  margin: 0;
+  color: #cc7400;
+}
+
+.NovelsubTitle {
+  display: flex;
+}
+
+.VWicon{
+  height: 2vmin;
+  width: 2vmin;
+  object-fit :fill;
+}
+
+.Block-Img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  
+}
+
+.App-header {
+  background-image: linear-gradient(to left, rgb(255, 196, 114),
+   rgb(255, 161, 89));
+  height: 7vmin;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  gap: 10px;
+}
+
+.App-link {
+  font-size: clamp(0.7rem, 1.3vw, 2rem);;
+  color: #ffffff;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+}
