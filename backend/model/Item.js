@@ -24,7 +24,12 @@ const rDataSchema = new mongoose.Schema(
   }
 );
 
-const Item = mongoose.model("Item", itemSchema, "MockData");
-const Rdata = mongoose.model("Rdata", rDataSchema, "MockReading");
+const Item =
+  mongoose.models.Item ||
+  mongoose.model("Item", itemSchema, "MockData");
+
+const Rdata =
+  mongoose.models.Rdata ||
+  mongoose.model("Rdata", rDataSchema, "MockReading");
 
 export {Item,Rdata};
