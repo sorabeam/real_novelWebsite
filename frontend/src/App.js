@@ -39,9 +39,9 @@ function Buttom({rdata1,item1,setReload}) {
     </div>
 );}
 
-function Navigation(rdata1,item,setReload){
+async function Navigation(rdata1,item,setReload){
   if (!rdata1.some(i => i._id === item._id)) {
-    createItem(item);
+    await createItem(item);
     setReload(r => !r);
   }
   window.open(item.Url, '_blank', 'noopener,noreferrer');
@@ -60,8 +60,8 @@ function SlideShow(){
   </Swiper>
 );}
 
-function deleteSomething(item,setReload){
-  deleteItem(item);
+async function deleteSomething(item,setReload){
+  await deleteItem(item);
   setReload(r => !r);
 }
 
