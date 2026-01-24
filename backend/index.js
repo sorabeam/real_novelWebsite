@@ -22,12 +22,8 @@ app.use("/rdata", RdataRoutes);
 
 console.log("MONGO_URL =", process.env.MONGO_URL);
 
-
-
 app.get("/", (req, res) => {
   res.send("Backend is running");
 });
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
-});
+export default app;

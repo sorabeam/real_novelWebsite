@@ -38,7 +38,9 @@ export async function deleteRdata(req, res) {
 
 export async function AddReadingNovel(req, res) {
   try {
-    const items = await Rdata.insertOne(req.body);
+    const item = new Rdata(req.body);
+    await item.save();
+    res.status(201).json(item);
   } catch (err) {
     res.status(400).json({ error: err.message });
   }
