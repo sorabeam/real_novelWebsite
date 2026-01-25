@@ -42,22 +42,22 @@ h1 {
 
 .NovelTitle {
   text-align: left;
-  font-size: clamp(0.5rem, 1.1vw, 2.2rem);
+  font-size: clamp(0.7rem, 1.1vw, 2.2rem);
 }
  
 .InfoText{
-  font-size: clamp(0.3rem, 0.8vw, 2rem);;
+  font-size: clamp(0.5rem, 0.8vw, 2rem);;
   padding-right: 5px;
 }
 
 .ReadingTitle{
   text-align: left;
-  font-size: clamp(0.9rem, 1.1vw, 2.2rem);
+  font-size: clamp(0.7rem, 1.1vw, 2.2rem);
 }
 
 .ReadingSubTitle{
   text-align: left;
-  font-size: clamp(0.3rem, 0.8vw, 2rem);
+  font-size: clamp(0.5rem, 0.8vw, 2rem);
 }
 
 .Text {
@@ -244,23 +244,45 @@ h1 {
 }
 
 @media (max-width: 600px) {
+  .Block-Img{
+    object-fit: fill;
+  }
+
   .navbar {
     flex-direction: column;
   }
   .BottomArea{
+    margin-right: 10px;
+    
+    height: 65vh;
     flex-direction: column;
   }
-  .ReadBox {
-    margin-left: auto;
-    margin-right: auto;
-    height: 40vh;
-    width: 100%;
+  .BookMark {
+    height: 35vh;
+    width: 94vmin;
     }
   .InventoryFrame {
-    margin-left: auto;
-    margin-right: auto;
-    height: 50vh;
-    width: 100%;
+    height: 32vh;
+    width: 94vmin;
+    gap: 5px;
+  }
+  .ReadingFrame{
+    height: 30vh;
+    width: 94vmin;
+    gap: 5px;
+  }
+  .ReadBox{
+    height: 40vh;
+    margin-top: 2vh;
+    margin-left: 0px;
+    width: 94vmin;
+  }
+
+  .App-header{
+    gap: 3px;
+  }
+  .ProfilePicture {
+    padding : 1vmin;
   }
 }
 
