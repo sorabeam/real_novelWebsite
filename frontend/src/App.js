@@ -133,12 +133,28 @@ function App() {
 
       <div className="BottomArea">
 
-        <div className="BookMark">
+        <div className="BookMark-outter">
+
+          <div className='TextBox'>
+            <h3>รายการนิยาย</h3>
+            <h5>กดเข้าชมเพื่อเพิ่มในรายการที่คั้นใว้</h5>
+          </div>
+
+          <div className="BookMark-inner">
+
                 <Buttom rdata1 = {rdatas} item1={items} setReload= {setReload}/>
+                </div>
         </div>
 
-        <div className="ReadBox">
+        <div className="ReadBox-outter">
+
+          <div className='TextBox'>
+            <h3>รายการที่คั้นใว้</h3>
+            <h5>กดปุ่มเพื่อลบรายการ</h5>
+          </div>
+          <div className="ReadBox-inner">
                 <ReadingListLoader rdata1 = {rdatas} setReload = {setReload}/>
+          </div>
         </div>
 
       </div>
