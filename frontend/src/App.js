@@ -114,6 +114,16 @@ function App() {
   return (
     <div className="App">
 
+      <div className='NavigatorBar'>
+        <h1>หน้าหลัก</h1>
+        <h1>รายการนิยาย</h1>
+        <h1>รายการที่คั้นใว้</h1>
+      </div>
+
+      <img src= "/images/DekDLogo.png" className="dekDLogo"/>
+      <div className='hiddeBook'/>
+      <img src= "/images/BS.png" className="decorateobj"/>
+
       <header className="App-header">
           <img src={logo} className="ProfilePicture" alt="logo" />
           <p className="Text" > {UserName} </p>

@@ -1,10 +1,65 @@
 .App {
-  background-color: white;
+  position: relative;
   text-align :center;
   min-height: 100vh;
+  font-family: "Mali", cursive;
+}
+
+.NavigatorBar{
+  display: flex;
+  margin-left: 25%;
+  gap: 1rem;
+  text-align: center;
+  top: 0.2rem;
+  object-fit: contain;
+  position: fixed;
+  z-index: 9;
+}
+
+.NavigatorBar h1 {
+  height: 5vmin;
+  color: #ffffff;
+  text-decoration: underline;
+  font-size: clamp(0.4rem, 1.2rem, 2rem);
+  text-shadow: 0 0 6px rgba(60, 60, 60, 0.8);;
+}
+
+.dekDLogo{
+  display: flex;
+  right: 0;
+  top: 1vmin;
+  width: 10%;
+  object-fit: contain;
+  height: 5vmin;
+  position: fixed;
+  z-index: 8;
+}
+
+.decorateobj {
+  display: flex;
+  right: 0;
+  top: 0;
+  width: 50%;
+  object-fit: cover;
+  height: 7vmin;
+  position: fixed;
+  z-index: 6;
+}
+
+.hiddeBook{
+  display: flex;
+  right: 0;
+  top: 0;
+  width: 50%;
+  object-fit: cover;
+  height: 7vmin;
+  position: fixed;
+  z-index: 7 ;
+  background-image: linear-gradient(to left, #ffa94600,#ff9c55);
 }
 
 .swiper {
+  margin-top: 7vmin;
   width: 100%;
 }
 
@@ -22,21 +77,25 @@ h1 {
 
 .hero {
   margin-top: 21px;
+  margin-bottom: 21px;
   width: 100%;
-  height: 42vmin;
+  height: auto;
   overflow: hidden;
 }
+
+.SlideShowContainier{
+  position: relative;
+  display: flex;
+  
+}
+
+
 
 .hero img {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* ตัดขอบ ไม่ยืด */
-}
-
-.Block-Img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  object-fit:contain;  /* ตัดขอบ ไม่ยืด */
+  outline: auto;
 }
 
 .NovelTitle {
@@ -50,17 +109,22 @@ h1 {
 }
 
 .TextBox {
+  font-family: "Mali", cursive;
   margin-left: 3vmin;
   text-align :left;
 }
 
 .TextBox h3 {
+  font-family: "Mali", cursive;
   margin-top: 0;
   margin-bottom: 0;
+  text-shadow: 0 0 7px rgb(255, 147, 65);
 }
 .TextBox h5 {
-  color: #8a8a8a;
+  font-family: "Mali", cursive;
+  color: #727272;
   margin-top: 0;
+  text-shadow: 0 0 7px rgb(255, 147, 65);
 }
 
 .ReadingTitle{
@@ -74,7 +138,8 @@ h1 {
 }
 
 .Text {
-  font-size: clamp(0.7rem, 1.3vw, 2rem);;
+  font-size: clamp(0.7rem, 1.3vw, 2rem);
+  color: white;
 }
 
 .Read-list {
@@ -117,8 +182,7 @@ h1 {
   height: 34vh;
   width: 100%;
   align-items: left;
-  background-color: #00000018;
-  outline : auto;
+  background-color: #00000000;
 }
 
 .BookMark-outter {
@@ -127,15 +191,14 @@ h1 {
 }
 
 .BookMark-inner {
-  outline: auto;
   height: 34vh;
   width: 100%;
   align-items: left;
-  background-color: #00000008;
+  background-color: #ff000008;
 }
 
 .Read {
-  background-color: white;
+  background-color: rgb(40, 40, 40);
   margin: auto;
   height:  100%;
   width: 88%;
@@ -177,7 +240,7 @@ h1 {
   height:15vmin;
   flex-direction: row;
   background-color: #ffffff;
-  outline: auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.467);
 }
 
 .BlockElement {
@@ -186,7 +249,7 @@ h1 {
   height: 15vmin;
   background: #ffffff;
   color: rgb(0, 0, 0);
-  outline: auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.467);
 }
 
 .ReadingFrame::-webkit-scrollbar{
@@ -194,24 +257,27 @@ h1 {
 }
 
 .Poster {
+  margin-right: 10px;
   height: 15vmin;
   width: 12vmin;
-  margin-right: 20px;
+  object-fit: cover;
 }
 
 .ProfilePicture {
+  margin-left: 1vmin;
   height: 5vmin;
   width: 5vmin;
-  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.467);
 }
 
 .VWbutton{
   margin-left: auto;
-  background: #00000000;
+  background: #4a383800;
 }
 
 .NovelInfo{
   display: flex;
+  font-family: "Mali", cursive;
   flex-direction: column;
 }
 
@@ -233,16 +299,8 @@ h1 {
   object-fit :fill;
 }
 
-.Block-Img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  
-}
-
 .App-header {
-  background-image: linear-gradient(to left, rgb(255, 189, 126),
-   rgb(255, 141, 70));
+  background-color: #ff9c55;
   height: 7vmin;
   width: 100%;
   display: flex;
@@ -250,6 +308,8 @@ h1 {
   font-size: calc(10px + 2vmin);
   color: white;
   gap: 10px;
+  z-index: 5;
+  position: fixed;
 }
 
 .App-link {
@@ -267,9 +327,6 @@ h1 {
 }
 
 @media (max-width: 600px) {
-  .Block-Img{
-    object-fit: fill;
-  }
 
   .navbar {
     flex-direction: column;
@@ -290,6 +347,12 @@ h1 {
     height: 30vh;
     width: 94vmin;
     gap: 5px;
+  }
+  .NavigatorBar{
+    margin-left: 40%;
+  }
+  .NavigatorBar h1{
+    font-size: clamp(0.3rem, 0.5rem, 2rem);
   }
   .ReadingFrame{
     height: 30vh;
