@@ -349,7 +349,7 @@ h1 {
     gap: 5px;
   }
   .NavigatorBar{
-    margin-left: 40%;
+    margin-left: 42%;
   }
   .NavigatorBar h1{
     font-size: clamp(0.3rem, 0.5rem, 2rem);
@@ -376,9 +376,6 @@ h1 {
   }
   .App-header{
     gap: 3px;
-  }
-  .ProfilePicture {
-    padding : 1vmin;
   }
 }
 
