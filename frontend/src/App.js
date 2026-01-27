@@ -82,7 +82,7 @@ function ReadingListLoader({rdata1,setReload}){
             border: 'none',
             boxShadow: 'none'
             }} >
-            <img className='VWicon' src="/images/Remove.png" alt="" />
+            <img className='VWicon' src="/images/Remove.png"  alt="404 Imgage Not Found" />
           </button>
 
         </div>
@@ -120,9 +120,9 @@ function App() {
         <h1>รายการที่คั้นใว้</h1>
       </div>
 
-      <img src= "/images/DekDLogo.png" className="dekDLogo"/>
+      <img src= "/images/DekDLogo.png" className="dekDLogo"  alt="404 Imgage Not Found"/>
       <div className='hiddeBook'/>
-      <img src= "/images/BS.png" className="decorateobj"/>
+      <img src= "/images/BS.png" className="decorateobj"  alt="404 Imgage Not Found"/>
 
       <header className="App-header">
           <img src={logo} className="ProfilePicture" alt="logo" />
